@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2020-0418: 2.8.14 (sarbian) for KSP 1.4
+	+ Add partTransform support and manual input sharing
 * 2020-0213: 2.8.13 (sarbian) for KSP 1.4
 	+ Fix effect using multiple MODEL_MULTI_SHURIKEN_PERSIST in their configs
 * 2020-0210: 2.8.12 (sarbian) for KSP 1.4
