@@ -1,5 +1,10 @@
 # SmokeScreen :: Change Log
 
+* 2018-0310: 2.8.0 (sarbian) for KSP 1.4
+	+ Goodbye old emitter
+	+ More old code cleanup
+	+ Update for KSP 1.4 use of Shuriken
+	+ Add support for single transform fx
 * 2018-0129: 2.7.6.1 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2018-0128: 2.7.6 (sarbian) for KSP 0.7.3
