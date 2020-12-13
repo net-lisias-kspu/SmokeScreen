@@ -143,5 +143,5 @@ internal class PersistentEmitterManager : MonoBehaviour
             }
         }
     }
-    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<PersistentEmitterManager>("SmokeScreen", true);
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<SmokeScreen.Startup>("SmokeScreen", typeof(PersistentEmitterManager).Name);
 }

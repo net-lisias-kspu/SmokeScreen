@@ -1320,5 +1320,5 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         return max;
     }
 
-    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<ModelMultiShurikenPersistFX>("SmokeScreen", true);
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<SmokeScreen.Startup>("SmokeScreen", typeof(ModelMultiShurikenPersistFX).Name);
 }

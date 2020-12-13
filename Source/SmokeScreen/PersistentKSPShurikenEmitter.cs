@@ -774,5 +774,5 @@ public class PersistentKSPShurikenEmitter
         return unit;
     }
 
-    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<PersistentKSPShurikenEmitter>("SmokeScreen", true);
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<SmokeScreen.Startup>("SmokeScreen", typeof(PersistentKSPShurikenEmitter).Name);
 }

@@ -36,6 +36,6 @@ namespace SmokeScreen
             Log.info("OnSave");
         }
 
-        private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<DebugEffect>("SmokeScreen", true);
+        private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<SmokeScreen.Startup>("SmokeScreen", typeof(DebugEffect).Name);
     }
 }
