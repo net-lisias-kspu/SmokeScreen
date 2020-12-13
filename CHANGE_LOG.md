@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2016-1024: 2.6.19.0 (sarbian) for KSP 0.7.3
+	+ Update the ToolbarWrapper to the last version
 * 2016-1015: 2.6.18 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2016-0724: 2.6.17 (sarbian) for KSP 0.7.3
