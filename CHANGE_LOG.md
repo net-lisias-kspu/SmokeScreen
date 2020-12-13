@@ -1,5 +1,9 @@
 # SmokeScreen :: Change Log
 
+* 2015-0526: 2.6.1 (sarbian) for KSP 0.7.3
+	+ Fix the singleEmitTimer and add workaround for the stock effect init
+	+ problem
+	+ Add a logging effect to debug
 * 2015-0428: 2.6.0 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2014-1215: 2.4.2.0 (sarbian) for KSP 0.7.3
