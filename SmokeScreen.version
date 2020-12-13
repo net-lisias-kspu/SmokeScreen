@@ -1,0 +1,17 @@
+{
+	"NAME"		: "SmokeScreen /L Unofficial",
+	"URL"		: "https://raw.githubusercontent.com/net-lisias-kspu/SmokeScreen/master/KourageousTourists.version",
+	"DOWNLOAD"	: "https://github.com/net-lisias-kspu/SmokeScreen/releases",
+	"CHANGE_LOG"	: "https://raw.githubusercontent.com/net-lisias-kspu/SmokeScreen/CHANGE_LOG.md",
+	"CHANGE_LOG_URL": "https://raw.githubusercontent.com/net-lisias-kspu/SmokeScreen/CHANGES.md",
+	"VERSION":{
+		"MAJOR":2,
+		"MINOR":8,
+		"PATCH":14,
+		"BUILD":0
+		},
+	"KSP_VERSION_MIN":{
+		"MAJOR":1,
+		"MINOR":4
+		}
+}

@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SmokeScreen")]
+[assembly: AssemblyTitle("SmokeScreen /L Unofficial")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SmokeScreen")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("© 2014-2020 Sarbian, © 2020 LisiasT")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -34,5 +34,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.8.14.0")]
-[assembly: AssemblyFileVersion("2.8.14.0")]
+[assembly: AssemblyVersion(SmokeScreen.Version.Number)]
+[assembly: AssemblyFileVersion(SmokeScreen.Version.Number)]
+[assembly: KSPAssembly("SmokeScreen", SmokeScreen.Version.major, SmokeScreen.Version.minor)]
