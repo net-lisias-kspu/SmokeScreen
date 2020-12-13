@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2016-0201: 2.6.12.0 (sarbian) for KSP 0.7.3
+	+ 2.6.12 - Fix the NRE spam when adding a digit in the live editor
 * 2016-0131: 2.6.11.0 (sarbian) for KSP 0.7.3
 	+ 2.6.11 - Open the UI with Mod+P
 * 2015-1222: 2.6.10 (sarbian) for KSP 0.7.3
