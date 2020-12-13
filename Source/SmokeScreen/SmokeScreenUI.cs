@@ -32,7 +32,7 @@ namespace SmokeScreen
     [KSPAddon(KSPAddon.Startup.Flight, false)]
     internal class SmokeScreenUI : MonoBehaviour
     {
-        private const string icon = "SmokeScreen/SmokeScreen";
+        private readonly string icon = KSPe.IO.File<Startup>.Asset.Solve("SmokeScreen");
 
         private readonly IButton button;
 

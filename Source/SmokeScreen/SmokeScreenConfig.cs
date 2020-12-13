@@ -29,6 +29,9 @@ using System.IO;
 using System.Reflection;
 using UnityEngine;
 
+using CONFIG_ASSET = KSPe.IO.Asset<SmokeScreen.Startup>.ConfigNode;
+using CONFIG_DATA = KSPe.IO.Data<SmokeScreen.Startup>.ConfigNode;
+
 namespace SmokeScreen
 {
     [KSPAddon(KSPAddon.Startup.Flight, false)]
@@ -65,6 +68,9 @@ namespace SmokeScreen
         private int lastHash = 0;
 
         private float lastSave = 0;
+
+        private readonly CONFIG_ASSET TEMPLATE = CONFIG_ASSET.For("SmokeScreen", "SmokeScreen");
+        private readonly CONFIG_DATA DATA = CONFIG_DATA.For("SmokeScreen");
 
         public static SmokeScreenConfig Instance;
 
@@ -113,19 +119,19 @@ namespace SmokeScreen
 
         private void Start()
         {
-            UrlDir.UrlConfig[] config = GameDatabase.Instance.GetConfigs("SmokeScreen");
+            Log.info("SmokeScreenConfig loading config");
 
-            if (config.Length > 0)
+            try
             {
-                Log.info("SmokeScreenConfig loading config");
-                ConfigNode node = config[0].config;
+                ConfigNode node = DATA.IsLoadable ? DATA.Load().Node : TEMPLATE.Load().Node;
                 ConfigNode.LoadObjectFromConfig(this, node);
                 maximumActiveParticles = Mathf.Max(1, maximumActiveParticles);
             }
-            else
+            catch (System.Exception e)
             {
-                Log.warn("SmokeScreenConfig could not load config");
+                Log.warn("SmokeScreenConfig could not load config due {0}", e.Message);
             }
+
             lastHash = Hash();
         }
 
@@ -146,16 +152,13 @@ namespace SmokeScreen
 
         private void Save()
         {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
-                          + "/SmokeScreen.cfg";
-
             Log.info("SmokeScreenConfig saving config");
 
             ConfigNode topNode = new ConfigNode("SmokeScreen");
             ConfigNode node = new ConfigNode("SmokeScreen");
             ConfigNode.CreateConfigFromObject(this, node);
             topNode.AddNode(node);
-            topNode.Save(path);
+            DATA.Save(topNode);
         }
     }
 }
