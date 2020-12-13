@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2015-0630: 2.6.4 (sarbian) for KSP 0.7.3
+	+ New sizeClamp Curve that adds itself to the sizeClamp value
 * 2015-0721: 2.6.3.0 (sarbian) for KSP 0.7.3
 	+ Fix an NRE spam when an active engine go out of physic range
 	+ V2.6.7
