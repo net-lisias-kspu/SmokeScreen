@@ -66,6 +66,9 @@
     <Reference Include="CSharpEmulator">
       <HintPath>..\..\..\..\..\..\LIB\plugins\CSharpEmulator.dll</HintPath>
     </Reference>
+    <Reference Include="KSPe">
+      <HintPath>..\..\..\..\..\..\LIB\plugins\KSPe.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

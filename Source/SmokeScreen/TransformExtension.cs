@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using KSPe.System.Collections.Generic;
 using UnityEngine;
 
 namespace SmokeScreen
