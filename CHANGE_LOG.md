@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2019-1221: 2.8.7.0 (sarbian) for KSP 1.4
+	+ No changelog provided
 * 2019-0925: 2.8.6 (sarbian) for KSP 1.4
 	+ Decluster now adds size & removes lifetime from new particles
 	+ Allow particle animation while in High Warp
