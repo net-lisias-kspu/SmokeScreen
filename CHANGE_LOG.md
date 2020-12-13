@@ -1,5 +1,8 @@
 # SmokeScreen :: Change Log
 
+* 2015-0721: 2.6.3.0 (sarbian) for KSP 0.7.3
+	+ Fix an NRE spam when an active engine go out of physic range
+	+ V2.6.7
 * 2015-0603: 2.6.2 (sarbian) for KSP 0.7.3
 	+ Don't set the rendermode each frame
 	+ Add curves for lengthScale and velocityScale
