@@ -1,5 +1,9 @@
 # SmokeScreen :: Change Log
 
+* 2019-0712: 2.8.3 (sarbian) for KSP 1.4
+	+ Fix for #35
+	+ UI to force emitOnUpdate and decluster
+	+ Handle emitOnUpdate for detached emitter
 * 2019-0707: 2.8.2.0 (sarbian) for KSP 1.4
 	+ No changelog provided
 * 2018-1103: 2.8.1 (sarbian) for KSP 1.4
