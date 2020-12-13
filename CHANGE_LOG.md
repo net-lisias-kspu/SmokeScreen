@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2015-0707: 2.6.5 (sarbian) for KSP 0.7.3
+	+ No changelog provided
 * 2015-0630: 2.6.4 (sarbian) for KSP 0.7.3
 	+ New sizeClamp Curve that adds itself to the sizeClamp value
 * 2015-0721: 2.6.3.0 (sarbian) for KSP 0.7.3
