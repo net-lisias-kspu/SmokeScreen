@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2020-0213: 2.8.13 (sarbian) for KSP 1.4
+	+ Fix effect using multiple MODEL_MULTI_SHURIKEN_PERSIST in their configs
 * 2020-0210: 2.8.12 (sarbian) for KSP 1.4
 	+ Comment typo and spare space
 	+ 2.8.11 - Potential for for raidernick scale troubles
