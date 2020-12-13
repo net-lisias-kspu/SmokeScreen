@@ -1,5 +1,9 @@
 # SmokeScreen :: Change Log
 
+* 2015-0603: 2.6.2 (sarbian) for KSP 0.7.3
+	+ Don't set the rendermode each frame
+	+ Add curves for lengthScale and velocityScale
+	+ Use the 1.0 provided values
 * 2015-0526: 2.6.1 (sarbian) for KSP 0.7.3
 	+ Fix the singleEmitTimer and add workaround for the stock effect init
 	+ problem
