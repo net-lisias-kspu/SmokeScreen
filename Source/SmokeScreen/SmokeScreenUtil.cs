@@ -37,7 +37,7 @@ namespace SmokeScreen
         {
             StringBuilder builder = new StringBuilder();
 
-            //print("node.values.Count " + node.values.Count + " node.nodes.Count " + node.nodes.Count);
+            Log.dbg("node.values.Count {0} ; node.nodes.Count {1}", node.values.Count, node.nodes.Count);
             for (int i = 0; i < node.values.Count; i++)
             {
                 ConfigNode.Value item = node.values[i];
@@ -79,9 +79,8 @@ namespace SmokeScreen
 
             Transform parentTransform = hit.collider.gameObject.transform;
 
-            ////print("AddLaunchPadColliders col name = " + hit.collider.gameObject.name);
-
-            ////print("AddLaunchPadColliders parent col name = " + hit.collider.gameObject.transform.parent.gameObject.name);
+            Log.dbg("AddLaunchPadColliders col name = {0}", hit.collider.gameObject.name);
+            Log.dbg("AddLaunchPadColliders parent col name = {0}", hit.collider.gameObject.transform.parent.gameObject.name);
 
             // Are the collider already here ?
             if (parentTransform.FindDeepChild(LaunchPadColliderName))
@@ -140,9 +139,6 @@ namespace SmokeScreen
             return true;
         }
 
-        private static void print(String s)
-        {
-            MonoBehaviour.print("[SmokeScreen SmokeScreenUtil] " + s);
-        }
+        private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<DebugEffect>(true);
     }
 }

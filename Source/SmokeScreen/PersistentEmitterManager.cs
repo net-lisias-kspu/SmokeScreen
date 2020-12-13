@@ -45,7 +45,7 @@ internal class PersistentEmitterManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        //Print("OnDestroy");
+        Log.dbg("OnDestroy");
         GameEvents.onGameSceneLoadRequested.Remove(OnSceneChange);
     }
     
@@ -60,7 +60,7 @@ internal class PersistentEmitterManager : MonoBehaviour
         FloatingOrigin.UnregisterParticleSystem(pkpe.pe);
         persistentEmittersShuriken.Remove(pkpe);
 
-        //print("[SmokeScreen PersistentEmitterManager]: Removed 1 PersistentKSPParticleEmitter. Count = " + persistentEmitters.Count);
+        Log.dbg("Removed 1 PersistentKSPParticleEmitter. Count = {0}", persistentEmittersShuriken.Count);
     }
 
     private void OnSceneChange(GameScenes scene)
@@ -143,9 +143,5 @@ internal class PersistentEmitterManager : MonoBehaviour
             }
         }
     }
-
-    private void Print(string s)
-    {
-        print("[SmokeScreen " + GetType().Name + "] : " + s);
-    }
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<PersistentEmitterManager>("SmokeScreen", true);
 }

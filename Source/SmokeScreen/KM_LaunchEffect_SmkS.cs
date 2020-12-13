@@ -175,10 +175,10 @@ namespace SmokeScreen
             {
                 foreach (var node in this.part.attachNodes)
                 {
-                    print("Att:" + node.id);
+                    Log.info("Att: {0}", node.id);
                     if (node.id == "bottom" && node.attachedPart != null)
                     {
-                        print("Attached!");
+                        Log.info("Attached!");
                         isActive = false;
                     }
                 }
@@ -193,19 +193,19 @@ namespace SmokeScreen
                 effectModel = GameDatabase.Instance.GetModel(model);
                 if (effectModel == null)
                 {
-                    print("Cannot find effectModel " + model);
+                    Log.warn("Cannot find effectModel {0}", model);
                     return;
                 }
                 effectModel.SetActive(true);
                 Transform parentTransform = part.transform.Find(parent);
-                //print("ParentTransform Null = " + (parentTransform==null));
+                Log.dbg("ParentTransform Null = {0}", (parentTransform==null));
                 effectModel.transform.SetParent(parentTransform ?? part.transform);
                 effectModel.transform.localPosition = position;
-                //print("position = " + position.ToString("F2"));
+                Log.dbg("position = {0:0.00}", position);
                 effectModel.transform.localScale = scale;
-                //print("scale = " + scale.ToString("F2"));
+                Log.dbg("scale = {0:0.00}", scale);
                 effectModel.transform.localRotation = Quaternion.Euler(rotation);
-                //print("rotation = " + rotation.ToString("F2"));
+                Log.dbg("rotation = {0:0.00}", rotation);
             }
 
 
@@ -250,18 +250,18 @@ namespace SmokeScreen
             {
                 if (launchEffect != null)
                 {
-                    //print ("DBG Found Effect: " + launchEffect.name);
+                    Log.dbg("Found Effect: {0}", launchEffect.name);
                     if (launchEffect.name == effectName)
                     {
                         effectsList.Add(launchEffect.GetInstanceID(), launchEffect);
                         if (transformName == "" || transformName == effectName)
                         {
-                            //print ("DBG: LP");
+                            Log.dbg("LP");
                             locationList.Add(launchEffect.GetInstanceID(), launchEffect.transform.localPosition);
                         }
                         else
                         {
-                            //print ("DBG: MB");
+                            Log.dbg("MB");
                             var partTransforms = this.part.GetComponentsInChildren<MonoBehaviour>();
                             foreach (MonoBehaviour partTransform in partTransforms)
                             {
@@ -296,21 +296,21 @@ namespace SmokeScreen
                     }
                 }
             }
-            //print ("DBG: BeforeLights");
+            Log.dbg("BeforeLights");
             var launchEffectsLights = effectModel == null ? this.part.GetComponentsInChildren<Light>() : effectModel.GetComponentsInChildren<Light>();
             foreach (Light launchEffectLight in launchEffectsLights)
             {
                 if (launchEffectLight != null)
                 {
-                    // print ("Found Light: " + launchEffectLight.name);
+                    Log.dbg("Found Light: {0}", launchEffectLight.name);
                     if (launchEffectLight.name == effectLightName)
                     {
-                        // print ("Added light");
+                        Log.dbg("Added light");
                         lightList.Add(launchEffectLight.GetInstanceID(), launchEffectLight);
                     }
                 }
             }
-            //print ("DBG: AfterLights");
+            Log.dbg("AfterLights");
         }
 
 
@@ -376,7 +376,7 @@ namespace SmokeScreen
             foreach (KeyValuePair<int, KSPParticleEmitter> pair in effectsList)
             {
                 KSPParticleEmitter launchEffect = pair.Value;
-                //print ("Found Effect: " + launchEffect.name+" state"+state);
+                Log.dbg("Found Effect: {0} state {1}", launchEffect.name, state);
                 launchEffect.emit = state;
                 if (state)
                 {
@@ -421,7 +421,7 @@ namespace SmokeScreen
             }
             else
             {
-                print("Effect " + effectName + " not active. Not starting.");
+                Log.warn("Effect {0} not active. Not starting.", effectName);
             }
 
         }
@@ -429,7 +429,7 @@ namespace SmokeScreen
         public override void OnTimer()
         {
             setEffect(false);
-            //print("Shutting off effects:" + effectName);
+            Log.dbg("Shutting off effects: {0}", effectName);
         }
     }
 
@@ -492,7 +492,7 @@ namespace SmokeScreen
         {
             setEffect(false);
             softDecrease = false;
-            print("Shutting off effects:" + effectName);
+            Log.info("Shutting off effects: {0}", effectName);
         }
     }
 }

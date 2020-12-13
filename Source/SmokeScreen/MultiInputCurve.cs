@@ -26,6 +26,7 @@
  */
 
 using System;
+using System.Diagnostics;
 using UnityEngine;
 
 // This class Serialization DOES NOT WORK in Unity
@@ -70,22 +71,22 @@ public class MultiInputCurve
 
     public MultiInputCurve(string name, bool additive = false)
     {
-        //print("Constructor for " + name + " backup_node is null = " + (node_backup == null).ToString());
+        //Log.dbg("Constructor for {0} backup_node is null = {1}", name, (node_backup == null));
         this.name = name;
         this.additive = additive;
 
         //if (node_backup != null)
-        //    print("node_backup is\n " + node_backup.Replace(Environment.NewLine, Environment.NewLine + "MultiInputCurve "));
+        //    Log.dbg("node_backup is {0}", node_backup.Replace(Environment.NewLine, Environment.NewLine + "MultiInputCurve "));
     }
 
     private void Reset()
     {
-        //print("Reset");
+        Log.dbg("Reset");
         for (int i = 0; i < inputsCount; i++)
         {
             string key = Enum.GetName(typeof(Inputs), i);
 
-            //print("Resetting " + key);
+            Log.dbg("Resetting {0}", key);
             curves[i] = new FXCurve(key, additive ? 0f : 1f) { valueName = key };
 
             // FXCurve constructor does not set the value name
@@ -99,10 +100,10 @@ public class MultiInputCurve
         //if (!isLoaded) Restore();
         if (curves != null && curves[0] != null)
         {
-            print("Test curve[0] is " + curves[0].valueName);
+            Log.detail("Test curve[0] is {0}", curves[0].valueName);
         }
 
-        //print("Test for " + name + " backup_node is null = " + (backup_node == null).ToString());
+        //Log.dbg("Test for {0} backup_node is null = {1}", name, (backup_node == null));
     }
 
     public void Load(ConfigNode node)
@@ -114,23 +115,24 @@ public class MultiInputCurve
         curves[(int)Inputs.power].Load(name, node);
         curves[(int)Inputs.power].valueName = "power";
 
-        //print("Load of " + name);
+        Log.dbg("Load of {0}", name);
 
         if (node.HasNode(name))
         {
-            //print("Load HasNode " + name);
+            Log.dbg("Load HasNode {0}", name);
             for (int i = 0; i < inputsCount; i++)
             {
                 string key = Enum.GetName(typeof(Inputs), i);
 
-                //print("Loading " + key);
+                Log.dbg("Loading {0}", key);
                 curves[i].Load(key, node.GetNode(name));
 
-                //print(
-                //    "Loaded " + key + " in " + curves[i].valueName + " " + curves[i].keyFrames.Count() + " should be "
-                //    + node.GetNode(name).GetValues(key).Length);
+				Log.dbg(
+					"Loaded {0} in {1} {2} should be {3}"
+					, key, curves[i].valueName, curves[i].keyFrames.Count, node.GetNode(name).GetValues(key).Length
+				);
 
-                string logKey = "log" + key;
+				string logKey = "log" + key;
                 if (node.GetNode(name).HasValue(logKey))
                 {
                     logCurves[i] = new FXCurve(logKey, additive ? 0f : 1f) { valueName = logKey };
@@ -154,7 +156,7 @@ public class MultiInputCurve
 
             if (!curves[i].evalSingle)
             {
-                //print("UpdateMinMax i=" + i + " " + curves[i].fCurve.length);
+               Log.dbg("UpdateMinMax i= {0} {1}", i, curves[i].fCurve.length);
                 for (int j = 0; j < curves[i].fCurve.length; j++)
                 {
                     float key = curves[i].fCurve.keys[j].time;
@@ -170,7 +172,7 @@ public class MultiInputCurve
 
             if (logCurves[i] != null && !logCurves[i].evalSingle)
             {
-                //print("UpdateMinMax i=" + i + " " + logCurves[i].fCurve.length);
+                Log.dbg("UpdateMinMax i= {0} {2}", i, logCurves[i].fCurve.length);
                 for (int j = 0; j < logCurves[i].fCurve.length; j++)
                 {
                     float key = logCurves[i].fCurve.keys[j].time;
@@ -219,19 +221,16 @@ public class MultiInputCurve
         ConfigNode subNode = new ConfigNode(name);
         for (int i = 0; i < inputsCount; i++)
         {
-            //print("Saving curve " + curves[i].valueName + " " + curves[i].keyFrames.Count());
+            Log.dbg("Saving curve {0} {1}", curves[i].valueName, curves[i].keyFrames.Count);
             curves[i].Save(subNode);
             if (logCurves[i] != null)
             {
-                //print("Saving curve " + logCurves[i].valueName);
+                Log.dbg("Saving curve {0}", logCurves[i].valueName);
                 logCurves[i].Save(subNode);
             }
         }
         node.AddNode(subNode);
     }
 
-    private static void print(String s)
-    {
-        MonoBehaviour.print("[SmokeScreen MultiInputCurve] " + s);
-    }
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<MultiInputCurve>("SmokeScreen", true);
 }

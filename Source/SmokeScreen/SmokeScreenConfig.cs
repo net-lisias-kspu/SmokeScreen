@@ -117,14 +117,14 @@ namespace SmokeScreen
 
             if (config.Length > 0)
             {
-                print("SmokeScreenConfig loading config");
+                Log.info("SmokeScreenConfig loading config");
                 ConfigNode node = config[0].config;
                 ConfigNode.LoadObjectFromConfig(this, node);
                 maximumActiveParticles = Mathf.Max(1, maximumActiveParticles);
             }
             else
             {
-                print("SmokeScreenConfig could not load config");
+                Log.warn("SmokeScreenConfig could not load config");
             }
             lastHash = Hash();
         }
@@ -149,7 +149,7 @@ namespace SmokeScreen
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
                           + "/SmokeScreen.cfg";
 
-            print("SmokeScreenConfig saving config");
+            Log.info("SmokeScreenConfig saving config");
 
             ConfigNode topNode = new ConfigNode("SmokeScreen");
             ConfigNode node = new ConfigNode("SmokeScreen");

@@ -223,7 +223,7 @@ public class PersistentKSPShurikenEmitter
     // Detach the emitter from its parent gameObject and stop its emission in timer seconds
     public void Detach(float timer)
     {
-        //Print("Detach");
+        Log.dbg("Detach");
         endTime = Time.fixedTime + timer;
         if (go != null && go.transform.parent != null)
         {
@@ -773,8 +773,6 @@ public class PersistentKSPShurikenEmitter
         unit = Vector3.Normalize(unit);
         return unit;
     }
-    private void Print(string s)
-    {
-        MonoBehaviour.print("[SmokeScreen " + GetType().Name + "] : " + s);
-    }
+
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<PersistentKSPShurikenEmitter>("SmokeScreen", true);
 }

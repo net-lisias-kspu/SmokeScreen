@@ -630,14 +630,14 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
             }
             else
             {
-                Print("Cannot find transform " + transformName);
+                Log.info("Cannot find transform {0}", transformName);
                 return;
             }
         }
         GameObject model = GameDatabase.Instance.GetModel(modelName);
         if (model == null)
         {
-            Print("Cannot find model " + modelName);
+            Log.info("Cannot find model {0}", modelName);
             return;
         }
         model.SetActive(true);
@@ -645,7 +645,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
 
         if (templateKspParticleEmitter == null)
         {
-            Print("Cannot find particle emitter on " + modelName);
+            Log.info("Cannot find particle emitter on {0}", modelName);
             Destroy(model);
             return;
         }
@@ -660,7 +660,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
             PartModule pm = hostPart.Modules["ProceduralSRB"];
 
             specialScale = pm.Fields.GetValue<float>("bellScale");
-            Print("Found ProceduralSRB. Rescaling by " + specialScale.ToString("F3") + " final scale " + (fixedScale * specialScale).ToString("F3"));
+            Log.info("Found ProceduralSRB. Rescaling by {0:0.000} final scale {1}:0.000}", specialScale, (fixedScale * specialScale));
         }
         
         if (hostPart.Modules.Contains("TweakScale"))
@@ -669,7 +669,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
             float tweakScale = pm.Fields.GetValue<float>("currentScale");
             float defaultScale = pm.Fields.GetValue<float>("defaultScale");
             specialScale = tweakScale / (defaultScale <= 0 ? 1 : defaultScale);
-            Print("Found TweakScale. Rescaling by " + specialScale.ToString("F3") + " final scale " + (fixedScale * specialScale).ToString("F3"));
+            Log.info("Found TweakScale. Rescaling by {0:0.000} final scale {1:0.000}", specialScale, (fixedScale * specialScale));
         }
 
         for (int i = 0; i < transforms.Count; i++)
@@ -803,10 +803,10 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
 
             if (node == null)
             {
-                Print("Unable to find the effect config for" +
-                      " part " + hostPart.protoPartSnapshot.partName +
-                      " effectName " + effectName +
-                      " instanceName " + instanceName);
+                Log.info(
+                    "Unable to find the effect config for part {0} effectName {1} instanceName {2}",
+                    hostPart.protoPartSnapshot.partName, effectName, instanceName
+                );
                 return;
             }
         }
@@ -895,7 +895,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave emission is null");
+            Log.info("OnSave emission is null");
         }
         if (energy != null)
         {
@@ -903,7 +903,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave energy is null");
+            Log.info("OnSave energy is null");
         }
         if (speed != null)
         {
@@ -911,7 +911,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave speed is null");
+            Log.info("OnSave speed is null");
         }
         if (grow != null)
         {
@@ -919,7 +919,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave grow is null");
+            Log.info("OnSave grow is null");
         }
         if (scale != null)
         {
@@ -927,7 +927,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave scale is null");
+            Log.info("OnSave scale is null");
         }
         if (size != null)
         {
@@ -935,7 +935,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave size is null");
+            Log.info("OnSave size is null");
         }
         if (offset != null)
         {
@@ -943,7 +943,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave offset is null");
+            Log.info("OnSave offset is null");
         }
         if (force != null)
         {
@@ -951,7 +951,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave force is null");
+            Log.info("OnSave force is null");
         }
         if (logGrow != null)
         {
@@ -959,7 +959,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave logGrow is null");
+            Log.info("OnSave logGrow is null");
         }
         if (linGrow != null)
         {
@@ -967,7 +967,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave linGrow is null");
+            Log.info("OnSave linGrow is null");
         }
         if (logGrowScale != null)
         {
@@ -975,7 +975,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave logGrowScale is null");
+            Log.info("OnSave logGrowScale is null");
         }
         if (alpha != null)
         {
@@ -983,7 +983,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave alpha is null");
+            Log.info("OnSave alpha is null");
         }
         if (linAlphaDecay != null)
         {
@@ -991,7 +991,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave linAlphaDecay is null");
+            Log.info("OnSave linAlphaDecay is null");
         }
         if (logAlphaDecay != null)
         {
@@ -999,7 +999,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave logAlphaDecay is null");
+            Log.info("OnSave logAlphaDecay is null");
         }
         if (initalVelocityOffsetMaxRadius != null)
         {
@@ -1007,7 +1007,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave initalVelocityOffsetMaxRadius is null");
+            Log.info("OnSave initalVelocityOffsetMaxRadius is null");
         }
 
         if (saturationMult != null)
@@ -1016,7 +1016,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave saturationMult is null");
+            Log.info("OnSave saturationMult is null");
         }
         if (brightnessMult != null)
         {
@@ -1024,7 +1024,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave brightnessMult is null");
+            Log.info("OnSave brightnessMult is null");
         }
 
         if (alphaMult != null)
@@ -1033,7 +1033,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave alphaMult is null");
+            Log.info("OnSave alphaMult is null");
         }
 
 
@@ -1043,7 +1043,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave sizeClampCurve is null");
+            Log.info("OnSave sizeClampCurve is null");
         }
 
         if (randConeEmit != null)
@@ -1052,7 +1052,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave randConeEmit is null");
+            Log.info("OnSave randConeEmit is null");
         }
 
         if (vRandPosOffset != null)
@@ -1061,7 +1061,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave vRandPosOffset is null");
+            Log.info("OnSave vRandPosOffset is null");
         }
 
         if (vPosOffset != null)
@@ -1070,7 +1070,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave vPosOffset is null");
+            Log.info("OnSave vPosOffset is null");
         }
 
         if (xyForce != null)
@@ -1079,7 +1079,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave xyForce is null");
+            Log.info("OnSave xyForce is null");
         }
 
         if (zForce != null)
@@ -1088,7 +1088,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave zForce is null");
+            Log.info("OnSave zForce is null");
         }
 
         if (angle != null)
@@ -1097,7 +1097,7 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave angle is null");
+            Log.info("OnSave angle is null");
         }
         if (distance != null)
         {
@@ -1105,13 +1105,8 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
         }
         else
         {
-            Print("OnSave distance is null");
+            Log.info("OnSave distance is null");
         }
-    }
-
-    private static void Print(String s)
-    {
-        print("[SmokeScreen ModelMultiShurikenPersistFX] " + s);
     }
 
     // TODO : move the whole UI stuff to a dedicated class - this is getting way too big
@@ -1324,4 +1319,6 @@ public class ModelMultiShurikenPersistFX : EffectBehaviour
 
         return max;
     }
+
+    private static readonly KSPe.Util.Log.Logger Log = KSPe.Util.Log.Logger.CreateForType<ModelMultiShurikenPersistFX>("SmokeScreen", true);
 }
