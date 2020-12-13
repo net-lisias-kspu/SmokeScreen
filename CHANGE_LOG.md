@@ -1,5 +1,10 @@
 # SmokeScreen :: Change Log
 
+* 2019-0723: 2.8.4 (sarbian) for KSP 1.4
+	+ Just say no to Linq. And say yes to null check
+	+ UpdateParticlesCount order and once per frame
+	+ Krakensbane scale mandate the use of a double
+	+ 31 - Add saturationMult, brightnessMult and alphaMult curves
 * 2019-0712: 2.8.3 (sarbian) for KSP 1.4
 	+ Fix for #35
 	+ UI to force emitOnUpdate and decluster
