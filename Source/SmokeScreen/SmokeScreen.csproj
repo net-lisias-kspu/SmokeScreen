@@ -54,6 +54,8 @@
     <Compile Include="SmokeScreenUtil.cs" />
     <Compile Include="ToolbarWrapper.cs" />
     <Compile Include="TransformExtension.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Properties\Version.cs">
       <DependentUpon>Version.tt</DependentUpon>
     </Compile>
@@ -71,6 +73,9 @@
     </Reference>
     <Reference Include="KSPe">
       <HintPath>..\..\..\..\..\..\LIB\plugins\KSPe.dll</HintPath>
+    </Reference>
+    <Reference Include="KSPe.UI">
+      <HintPath>..\..\..\..\..\..\LIB\plugins\KSPe.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
