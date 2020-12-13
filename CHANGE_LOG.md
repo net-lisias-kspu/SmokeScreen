@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2019-0707: 2.8.2.0 (sarbian) for KSP 1.4
+	+ No changelog provided
 * 2018-1103: 2.8.1 (sarbian) for KSP 1.4
 	+ No changelog provided
 * 2018-0310: 2.8.0 (sarbian) for KSP 1.4
