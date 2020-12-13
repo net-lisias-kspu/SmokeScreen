@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2019-1221: 2.8.8 (sarbian) for KSP 1.4
+	+ Fix the root part effect and remove the backup node hack
 * 2019-1221: 2.8.7.0 (sarbian) for KSP 1.4
 	+ No changelog provided
 * 2019-0925: 2.8.6 (sarbian) for KSP 1.4
