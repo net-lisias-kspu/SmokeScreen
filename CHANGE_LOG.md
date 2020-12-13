@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2016-0131: 2.6.11.0 (sarbian) for KSP 0.7.3
+	+ 2.6.11 - Open the UI with Mod+P
 * 2015-1222: 2.6.10 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2015-1027: 2.6.9.0 (sarbian) for KSP 0.7.3
