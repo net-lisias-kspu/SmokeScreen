@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2018-0129: 2.7.6.1 (sarbian) for KSP 0.7.3
+	+ No changelog provided
 * 2018-0128: 2.7.6 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2017-0703: 2.7.5 (sarbian) for KSP 0.7.3
