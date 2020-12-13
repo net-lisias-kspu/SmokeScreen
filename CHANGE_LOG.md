@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2016-0215: 2.6.13 (sarbian) for KSP 0.7.3
+	+ Fix smoke running away from vehicle when Krakensbane activates
 * 2016-0201: 2.6.12.0 (sarbian) for KSP 0.7.3
 	+ 2.6.12 - Fix the NRE spam when adding a digit in the live editor
 * 2016-0131: 2.6.11.0 (sarbian) for KSP 0.7.3
