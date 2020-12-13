@@ -1,5 +1,10 @@
 # SmokeScreen :: Change Log
 
+* 2020-0210: 2.8.12 (sarbian) for KSP 1.4
+	+ Comment typo and spare space
+	+ 2.8.11 - Potential for for raidernick scale troubles
+	+ Fix the NRE / Effect not working on config that uses the same name
+	+ multiple time
 * 2019-1221: 2.8.9 (sarbian) for KSP 1.4
 	+ No changelog provided
 * 2019-1221: 2.8.8 (sarbian) for KSP 1.4
