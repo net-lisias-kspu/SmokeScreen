@@ -1,5 +1,8 @@
 # SmokeScreen :: Change Log
 
+* 2016-1218: 2.7.0 (sarbian) for KSP 0.7.3
+	+ Lets go to the future
+	+ 6 != 7
 * 2016-1120: 2.6.21 (sarbian) for KSP 0.7.3
 	+ No changelog provided
 * 2016-1119: 2.6.20 (sarbian) for KSP 0.7.3
