@@ -1,39 +1,39 @@
 # SmokeScreen :: Change Log
 
-* 2020-0418: 2.8.14 (sarbian) for KSP 1.4
+* 2020-0418: 2.8.14 (sarbian) for KSP >= 1.8
 	+ Add partTransform support and manual input sharing
-* 2020-0213: 2.8.13 (sarbian) for KSP 1.4
+* 2020-0213: 2.8.13 (sarbian) for KSP >= 1.8
 	+ Fix effect using multiple MODEL_MULTI_SHURIKEN_PERSIST in their configs
-* 2020-0210: 2.8.12 (sarbian) for KSP 1.4
+* 2020-0210: 2.8.12 (sarbian) for KSP [1.4 <= KSP < 1.8]
 	+ Comment typo and spare space
 	+ 2.8.11 - Potential for for raidernick scale troubles
 	+ Fix the NRE / Effect not working on config that uses the same name
 	+ multiple time
-* 2019-1221: 2.8.9 (sarbian) for KSP 1.4
+* 2019-1221: 2.8.9 (sarbian) for [1.4 <= KSP < 1.8]
 	+ No changelog provided
-* 2019-1221: 2.8.8 (sarbian) for KSP 1.4
+* 2019-1221: 2.8.8 (sarbian) for [1.4 <= KSP < 1.8]
 	+ Fix the root part effect and remove the backup node hack
-* 2019-1221: 2.8.7.0 (sarbian) for KSP 1.4
+* 2019-1221: 2.8.7.0 (sarbian) for [1.4 <= KSP < 1.8]
 	+ No changelog provided
-* 2019-0925: 2.8.6 (sarbian) for KSP 1.4
+* 2019-0925: 2.8.6 (sarbian) for [1.4 <= KSP < 1.8]
 	+ Decluster now adds size & removes lifetime from new particles
 	+ Allow particle animation while in High Warp
-* 2019-0724: 2.8.5 (sarbian) for KSP 1.4
+* 2019-0724: 2.8.5 (sarbian) for [1.4 <= KSP < 1.8]
 	+ No changelog provided
-* 2019-0723: 2.8.4 (sarbian) for KSP 1.4
+* 2019-0723: 2.8.4 (sarbian) for [1.4 <= KSP < 1.8]
 	+ Just say no to Linq. And say yes to null check
 	+ UpdateParticlesCount order and once per frame
 	+ Krakensbane scale mandate the use of a double
 	+ 31 - Add saturationMult, brightnessMult and alphaMult curves
-* 2019-0712: 2.8.3 (sarbian) for KSP 1.4
+* 2019-0712: 2.8.3 (sarbian) for [1.4 <= KSP < 1.8]
 	+ Fix for #35
 	+ UI to force emitOnUpdate and decluster
 	+ Handle emitOnUpdate for detached emitter
-* 2019-0707: 2.8.2.0 (sarbian) for KSP 1.4
+* 2019-0707: 2.8.2.0 (sarbian) for [1.4 <= KSP < 1.8]
 	+ No changelog provided
-* 2018-1103: 2.8.1 (sarbian) for KSP 1.4
+* 2018-1103: 2.8.1 (sarbian) for [1.4 <= KSP < 1.8]
 	+ No changelog provided
-* 2018-0310: 2.8.0 (sarbian) for KSP 1.4
+* 2018-0310: 2.8.0 (sarbian) for [1.4 <= KSP < 1.8]
 	+ Goodbye old emitter
 	+ More old code cleanup
 	+ Update for KSP 1.4 use of Shuriken
