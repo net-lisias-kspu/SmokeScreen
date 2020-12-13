@@ -1,5 +1,9 @@
 # SmokeScreen :: Change Log
 
+* 2017-0121: 2.7.1 (sarbian) for KSP 0.7.3
+	+ Fix Effect init related to a vicious API change in Stock made by a
+	+ stupid dev (smack myself on head). Fix KSP-RO/RealismOverhaul#1492
+	+ Fix the Animation Color for converted Shiruken particle system
 * 2016-1218: 2.7.0 (sarbian) for KSP 0.7.3
 	+ Lets go to the future
 	+ 6 != 7
