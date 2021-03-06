@@ -179,8 +179,7 @@ First we have 2 kind of config parameters :
 
 ### The Fixed Parameters
 
-modelName : point to the model of your effect. it's the same as the stock FX so you'll have to find stock tutorial on how to build those in unity.
-
+* *modelName* : point to the model of your effect. it's the same as the stock FX so you'll have to find stock tutorial on how to build those in unity.
 * *transformName* : part transform where your effect is attached
 * *shaderFileName* : point to a compiled shader text file to replace the default shader of your model. Not testes all that much
 * *renderMode* : set the particule renderMode, one of Billboard/HorizontalBillboard/SortedBillboard/Stretch/VerticalBillboard. See unity doc http://docs.unity3d.com/ScriptReference/ParticleRenderMode.html
