@@ -1,4 +1,6 @@
 ﻿/*
+ * Copyright (c) 2021, LisiasT
+ * 
  * Copyright (c) 2019, Sébastien GAGGINI AKA Sarbian, France
  * All rights reserved.
  *

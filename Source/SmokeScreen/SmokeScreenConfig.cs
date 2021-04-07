@@ -1,4 +1,6 @@
 ﻿/*
+ * Copyright (c) 2021, LisiasT
+ * 
  * Copyright (c) 2019, Sébastien GAGGINI AKA Sarbian, France
  * All rights reserved.
  *
@@ -25,8 +27,6 @@
  *
  */
 
-using System.IO;
-using System.Reflection;
 using UnityEngine;
 
 using CONFIG_ASSET = KSPe.IO.Asset<SmokeScreen.Startup>.ConfigNode;
