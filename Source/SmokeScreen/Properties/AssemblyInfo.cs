@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SmokeScreen /L Unofficial")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("L Aerospace/KSP Divisoin")]
 [assembly: AssemblyProduct("SmokeScreen")]
-[assembly: AssemblyCopyright("© 2014-2020 Sarbian, © 2020 LisiasT")]
+[assembly: AssemblyCopyright("© 2014-2020 Sarbian, © 2021 LisiasT")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -37,3 +37,5 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion(SmokeScreen.Version.Number)]
 [assembly: AssemblyFileVersion(SmokeScreen.Version.Number)]
 [assembly: KSPAssembly("SmokeScreen", SmokeScreen.Version.major, SmokeScreen.Version.minor)]
+[assembly: KSPAssemblyDependency("KSPe", 2, 2)]
+[assembly: KSPAssemblyDependency("KSPe.UI", 2, 2)]
