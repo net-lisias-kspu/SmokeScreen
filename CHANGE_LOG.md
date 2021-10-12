@@ -1,5 +1,7 @@
 # SmokeScreen :: Change Log
 
+* 2021-1026: 2.8.14.3 (LisiasT) for KSP >= 1.4
+	+ Updating codebase to KSPe v.2.4
 * 2021-0413: 2.8.14.2 (LisiasT) for KSP >= 1.4
 	+ Making the thing compatible downto KSP 1.4
 	+ Adding KSPe facilities:
