@@ -29,7 +29,6 @@
 
 namespace SmokeScreen
 {
-    using System;
     using System.Text;
     using UnityEngine;
 
