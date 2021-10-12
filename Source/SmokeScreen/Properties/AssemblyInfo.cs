@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("L Aerospace/KSP Divisoin")]
 [assembly: AssemblyProduct("SmokeScreen")]
-[assembly: AssemblyCopyright("© 2014-2020 Sarbian, © 2021 LisiasT")]
+[assembly: AssemblyCopyright("© 2021 LisiasT")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
