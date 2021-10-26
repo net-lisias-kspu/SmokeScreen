@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("SmokeScreen /L Unofficial")]
+[assembly: AssemblyTitle("SmokeScreen /L Unleashed")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("L Aerospace/KSP Divisoin")]
-[assembly: AssemblyProduct("SmokeScreen")]
-[assembly: AssemblyCopyright("© 2021 LisiasT")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany(SmokeScreen.LegalMamboJambo.Company)]
+[assembly: AssemblyProduct(SmokeScreen.LegalMamboJambo.Product)]
+[assembly: AssemblyCopyright(SmokeScreen.LegalMamboJambo.Copyright)]
+[assembly: AssemblyTrademark(SmokeScreen.LegalMamboJambo.Trademark)]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
