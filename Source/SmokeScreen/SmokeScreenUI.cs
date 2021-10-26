@@ -51,6 +51,10 @@
  */
 using UnityEngine;
 
+using GUI = KSPe.UI.GUI;
+using GUILayout = KSPe.UI.GUILayout;
+using Toolbar = KSPe.UI.Toolbar;
+
 namespace SmokeScreen
 {
     [KSPAddon(KSPAddon.Startup.Flight, false)]
@@ -58,9 +62,9 @@ namespace SmokeScreen
     {
         private readonly string icon = KSPe.IO.File<Startup>.Asset.Solve("SmokeScreen");
 
-        private readonly IButton button;
+		private readonly Toolbar.Button button;
 
-        private bool showUI = false;
+		private bool showUI = false;
 
         private Rect winPos = new Rect(450, 50, 400, 100);
 
@@ -68,18 +72,29 @@ namespace SmokeScreen
 
         private SmokeScreenUI()
         {
-            if (!ToolbarManager.ToolbarAvailable)
-            {
-                return;
-            }
+			Texture2D icon = KSPe.IO.Asset<Startup>.Texture2D.LoadFromFile("SmokeScreen");
+			this.button = Toolbar.Button.Create(this
+					, KSP.UI.Screens.ApplicationLauncher.AppScenes.ALWAYS
+					, icon, icon
+					, Version.FriendlyName
+				);
+			this.button.Toolbar.Add(Toolbar.Button.ToolbarEvents.Kind.Active
+					, new Toolbar.Button.Event(this.OnActive, this.OnInactive)
+				);
+			ToolbarController.Instance.Add(this.button);
+		}
 
-            button = ToolbarManager.Instance.add("SmokeScreen", "main");
-            button.TexturePath = icon;
-            button.ToolTip = "SmokeScreen";
-            button.OnClick += e => { showUI = !showUI; };
-        }
+		private void OnActive()
+		{
+			this.showUI = true;
+		}
 
-        internal void Update()
+		private void OnInactive()
+		{
+			this.showUI = false;
+		}
+
+		internal void Update()
         {
             if (GameSettings.MODIFIER_KEY.GetKey() && Input.GetKeyDown(KeyCode.P))
                 showUI = !showUI;
@@ -88,9 +103,7 @@ namespace SmokeScreen
         private void OnDestroy()
         {
             if (button != null)
-            {
-                button.Destroy();
-            }
+                ToolbarController.Instance.Destroy();
         }
 
         private void OnGUI()

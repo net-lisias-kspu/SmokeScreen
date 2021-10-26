@@ -49,11 +49,14 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-using SmokeScreen;
 using System;
 using System.Collections.Generic;
 using UniLinq;
 using UnityEngine;
+
+using SmokeScreen;
+using GUI = KSPe.UI.GUI;
+using GUILayout = KSPe.UI.GUILayout;
 
 [EffectDefinition("MODEL_MULTI_SHURIKEN_PERSIST")]
 public class ModelMultiShurikenPersistFX : EffectBehaviour

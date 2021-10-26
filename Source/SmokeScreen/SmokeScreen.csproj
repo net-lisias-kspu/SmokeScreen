@@ -52,7 +52,6 @@
     <Compile Include="SmokeScreenConfig.cs" />
     <Compile Include="SmokeScreenUI.cs" />
     <Compile Include="SmokeScreenUtil.cs" />
-    <Compile Include="ToolbarWrapper.cs" />
     <Compile Include="TransformExtension.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Startup.cs" />
@@ -61,6 +60,7 @@
     </Compile>
     <Compile Include="ModuleManagerSupport.cs" />
     <Compile Include="Properties\LegalMamboJambo.cs" />
+    <Compile Include="ToolbarSupport.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
