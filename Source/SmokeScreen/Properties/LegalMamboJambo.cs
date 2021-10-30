@@ -28,7 +28,7 @@ namespace SmokeScreen
 {
 	public static class LegalMamboJambo
 	{
-		public const string Company = "L Aerospace/KSP Division";
+		public const string Company = "/L Aerospace/KSP Division";
 		public const string Copyright = "© 2018-2021 LisiasT";
 		public const string Product = "SmokeScreen";
 		public const string Trademark = "SmokeScreen™ by Sarbian, /L Unleashed™ by LisiasT";
